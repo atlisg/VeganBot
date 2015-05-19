@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>VeganBot</title>    
+		<link rel="author" href="humans.txt">
+		<style>
+			body {color: #333; background-color: #BBB; font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; padding: 1% 12% 2% 12%; text-align: center;}
+			h1 {color: darkgreen;}
+			h5 {color: #333; font-style: italic;}
+			form {padding: 2% 20% 2% 20%; background-color: #BBB}
+			#justification {background-color: #DDD; width: 80%; font-size: 14px}
+			#conv {height: 300px; overflow:auto; border: solid 2px; background-color: #DDD; padding:}
+			.usr-item {text-align: left; color: darkred; background-color: #DDD; }
+			.bot-item {text-align: left; color: darkgreen; background-color: #DDD; }
+			#butt {position: absolute; left: -9999px}
+			p {padding: 0 2% 0 2%;}
+		</style>
+		<script>
+		function scroll() {
+    		$("#conv").scrollTop($("#conv")[0].scrollHeight);
+		}
+		</script>
+	</head>
+	<body OnLoad="document.usersay.justification.focus(); scroll()">
+		<h1>VeganBot: Greetings, human!</h1>
+		<h5>The objective of VeganBot is to eraticate any myths and delusions people might have about where food comes from. After a chat with VeganBot, hopefully you will see that veganism is the only ethical way of life in modern societies, unless you support needlessly harming and exploiting animals.</h5>
+		<div id="conv">
+			{% for x in conv_list %}
+				</p><p class="usr-item">You: {{x[0]}}</p>
+				</p><p class="bot-item">VeganBot: {{x[1]}}</p>
+			{% endfor %}
+		</div>
+		<form name="usersay" id="usersay" method="POST" action="/">
+			<label for="justification">Enter a reason or justification for why you're not vegan.</label><br/>
+			<input type="text" id="justification" name="justification"><br/>
+			<input type="submit" value="enter" hidefocus="true" id="butt">
+		</form> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+	</body>
+</html>
