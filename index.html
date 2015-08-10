@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Sjálfvirknivæðing ferla á skrifstofu</title>    
+		<link rel="author" href="humans.txt">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+		<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="5fab.js"></script>
+	</head>
+	<body ng-app="5fabApp" ng-controller="5fabController">
+
+		<h1>Upplýsingar námskeiða fyrir nemendur</h1>
+		<div id="main">
+			<p>*Síðast uppfært þann {{now}}</p>
+			<table ng-repeat="x in courses">
+				<caption>{{x[0]}} : {{x[1]}}</caption>
+				<tr class="head">
+					<th class="empty"></th>
+					<th>Hæfniviðmið</th>
+					<th>Lýsing</th>
+					<th>Kennsluaðferð</th>
+					<th>Námsmat</th>
+					<th>Kennsluáætlun</th>
+					<th>Bækur</th>
+				</tr>
+				<tr>
+					<td class="head">Íslenska</td>
+					<td>{{x[2]}}</td>
+					<td>{{x[4]}}</td>
+					<td>{{x[6]}}</td>
+					<td>{{x[8]}}</td>
+					<td>{{x[10]}}</td>
+					<td>{{x[12]}}</td>
+				</tr>
+				<tr>
+					<td class="head">Enska</td>
+					<td>{{x[3]}}</td>
+					<td>{{x[5]}}</td>
+					<td>{{x[7]}}</td>
+					<td>{{x[9]}}</td>
+					<td>{{x[11]}}</td>
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+
+
+	</body>
+</html>
