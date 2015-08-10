@@ -1,0 +1,47 @@
+body {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; 
+	background-color: #DDD; 
+	color: #333; 
+	margin: 0px;
+}
+#main {
+	text-align: left; 
+	padding: 0% 12% 2% 12%;
+	margin: 0px;
+}
+table {
+	border-collapse: collapse;
+	background-color: #FFF; 
+	width: 100%;
+	margin-bottom: 30px;
+}
+caption {
+	padding: 15px; 
+	font-size: 25px;
+}
+h1 {
+	text-align: center;
+	padding: 20px; 
+	margin: 0px;
+}
+th, td {
+	border: 1px solid black; 
+	height: 32px; 
+	padding-left: 15px; 
+	padding-right: 15px;
+}
+p {
+	text-align: right;
+	font-size: 11px;
+	font-style: italic;
+}
+.head {
+	background-color: #BDF; 
+	font-size: 16px; 
+	font-style: italic;
+}
+.empty {
+	background-color: #DDD; 
+	border-left: none;
+	border-top: none;
+}

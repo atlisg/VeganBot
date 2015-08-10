@@ -1,0 +1,24 @@
+{
+  "name": "HR",
+  "version": "0.0.0",
+  "description": "VeganBot",
+  "main": "vegan_bot.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "key"
+  ],
+  "authors": [
+    "Atli"
+  ],
+  "license": "MIT",
+  "homepage": "já",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
