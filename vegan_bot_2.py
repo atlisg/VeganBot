@@ -1,8 +1,16 @@
 #!/usr/bin/env python3
 from pprint import pprint
+import os
+import csv
 import json
+from collections import Counter
 from stemming.porter2 import stem
+from PyDictionary import PyDictionary
 import re
+
+keys = [ 'anim', 'vegan', 'like', 'harm', 'dog', 'take', 'kill', 'suffer', 'cow', 'fine', 'cultur', 'cat', 'matter', 'right', 'meat', 'about', 'never', 'without', 'human', 'surviv', 'beef', 'some', 'bacon' ]
+real_dict = PyDictionary()
+syns = {}
 
 def process_sentence(s):
     words = s.lower().split()
@@ -14,7 +22,7 @@ def process_sentence(s):
             l.append(stem(r))
     return l
 
-# process justifications
+# import data from guide
 lines = []
 with open('Guide.txt') as f:
     for x in f:
@@ -22,6 +30,7 @@ with open('Guide.txt') as f:
         if line != '':
             lines.append(line)
 
+# process justifications
 jst_words = []
 justifs = lines[2:68]
 justifs_dict = {}
@@ -29,7 +38,8 @@ for j in justifs:
     spl = j.split(' ',maxsplit=1)
     l = process_sentence(spl[1])
     for x in l:
-    	jst_words.append(x)
+        if x not in keys:
+        	jst_words.append(x)
     justifs_dict[spl[0]] = l
 
 # process answers

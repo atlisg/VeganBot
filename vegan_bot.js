@@ -1,16 +1,16 @@
-angular.module('5fabApp', ['ngRoute']);
+angular.module('VeganBotApp', ['ngRoute']);
 
-angular.module("5fabApp").controller("5fabController", function($scope, $http) {
+angular.module("VeganBotApp").controller("VeganBotController", function($scope, $http) {
 
-	$scope.now = "";
-	$scope.courses = [];
+	$scope.justifs = {};
+	$scope.answers = {};
 
-	$http.get('db.json').then(function(res) {
-		$scope.courses = res.data;
+	$http.get('justifs.json').then(function(res) {
+		$scope.justifs = res.data;
 	});
 
-	$http.get('now.json').then(function(res) {
-		$scope.now = res.data;
+	$http.get('answers.json').then(function(res) {
+		$scope.answers = res.data;
 	});
 
 });
