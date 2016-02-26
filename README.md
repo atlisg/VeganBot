@@ -1,2 +1,0 @@
-# VeganBot
-ChatBot promoting veganism
