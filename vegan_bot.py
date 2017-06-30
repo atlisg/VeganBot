@@ -4,7 +4,7 @@ import csv
 from pprint import pprint
 from flask import Flask, render_template, request
 from collections import Counter
-from stemming.porter2 import stem
+#from stemming.porter2 import stem
 import argparse
 from PyDictionary import PyDictionary
 import datetime
@@ -37,7 +37,8 @@ def process_sentence(s):
         r = re.findall('\w', w)
         r = ''.join(r)
         if r != '':
-            l.append(stem(r))
+            #l.append(stem(r))
+            l.append(r)
     return l
 
 def get_synonyms(w):
@@ -47,7 +48,8 @@ def get_synonyms(w):
     if syns[w] != None:
         for x in syns[w]:
             if x not in commons:
-                ret.append(stem(x))
+                #ret.append(stem(x))
+                ret.append(x)
     return ret
 
 lines = []
