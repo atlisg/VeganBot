@@ -1,22 +1,19 @@
 # VeganBot : A chatty robot promoting veganism
 
-##### *Assignment 5 : Project : The Python Programming Language*
+### Requirements
 
-### Instructions
-To run this Python-script, you need to have the following installed:
+- [python >= 3.4.3](https://www.python.org/downloads/release/python-343/)
+- [flask](http://flask.pocoo.org/docs/0.10/installation/): `pip3 install Flask`
+- [PyDictionary](https://pypi.python.org/pypi/PyDictionary/1.3.4): `pip3 install PyDictionary`
 
-* [python 3.4.3](https://www.python.org/downloads/release/python-343/)
-* [flask](http://flask.pocoo.org/docs/0.10/installation/)
-* [stemming](https://pypi.python.org/pypi/stemming/1.0)
-* [PyDictionary](https://pypi.python.org/pypi/PyDictionary/1.3.4)
+### Setup
 
-You then need to do the following:
-
-1. Open up a command line tool and move into the folder containing this README file.
-2. Run the command `python3 vegan_bot.py -h` to see how to use this program.
-3. Run the command `python3 vegan_bot.py` plus optional arguments if desired (see bottom of this document for optional arguments).
-3. Write (or copy-paste) `127.0.0.1:5000` in the address bar of your favorite browser and hit enter.
-4. Have a chat with VeganBot.
+1. Clone the repo `git clone <repo>`
+2. Change directory `cd <repo>`
+3. Run `python3 vegan_bot.py -h` to see how to use this program.
+4. Run `python3 vegan_bot.py` plus optional arguments if desired (see bottom of this document for optional arguments).
+5. Type `127.0.0.1:5000` in the address bar of your favorite browser and hit enter.
+6. Have a chat with VeganBot.
 
 ### Example
 
@@ -55,7 +52,7 @@ Here are a few examples of input strings that are common justifications for harm
 
 #### Stem
 
-The program only uses roots of the words for better comparison. This is implemented using [stemming](https://pypi.python.org/pypi/stemming/1.0).
+~~The program only uses roots of the words for better comparison. This is implemented using [stemming](https://pypi.python.org/pypi/stemming/1.0).~~ Momentarily disabled
 
 #### Synonyms
 
